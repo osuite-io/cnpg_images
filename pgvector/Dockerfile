@@ -1,5 +1,10 @@
 FROM ghcr.io/cloudnative-pg/postgresql:17.5
 
+LABEL org.opencontainers.image.source=https://github.com/osuite-io/cnpg_images
+LABEL org.opencontainers.image.description="CNPG image with pgvector extension for PostgreSQL 17.5"
+LABEL org.opencontainers.image.licenses=MIT
+LABEL org.opencontainers.image.vendor="osuite.io"
+
 USER root
 
 RUN set -xe; \
