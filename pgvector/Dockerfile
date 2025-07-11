@@ -1,0 +1,13 @@
+FROM ghcr.io/cloudnative-pg/postgresql:17.5
+
+USER root
+
+RUN set -xe; \
+	apt-get update; \
+	apt-get install -y --no-install-recommends \
+		"postgresql-17-pgvector" ; \
+	rm -fr /tmp/* ; \
+	rm -rf /var/lib/apt/lists/*;
+
+# Change to the uid of postgres (26)
+USER 26
