@@ -15,4 +15,5 @@ RUN set -xe; \
 	rm -rf /var/lib/apt/lists/*;
 
 # Change to the uid of postgres (26)
+RUN usermod -u 26 postgres
 USER 26
